@@ -119,9 +119,15 @@ Hay un cuarto panel (que probablemente todavía no te aparece)  y que es el que 
 
 ### Creación de un proyecto 
 
-Una de las ventajas de RStudio es que permite crear "proyectos". Un projecto es un espacio o contexto de trabajo asociado a una carpeta en particular, en la que se guardan nuestro(s) script(s), archivos de datos, etc. Cuando creamos un proyecto en RStudio, se crea un tipo especial de archivo (.Rproj) que lo que hace es vincular todo lo que se encuentra dentro de esa carpeta. ¿Por qué esto es útil? Si parte de nuestro script, por ejemplo, implica abrir un archivo que está en la carpeta de nuestro proyecto, no necesito indicar en mi código toda la ruta del archivo: lo que hará RStudio será buscarlo en el entorno/carpeta del proyecto. Si movemos la carpeta a otro lugar de nuestro computador o la compartimos con otra persona, nuestro código seguirá funcionando, ya que el archivo .Rproj mantendrá todo unido. Si no creara un proyecto, tendría que indicar al inicio de mi script cuál es la ruta de la carpeta que ocuparé como espacio de trabajo. El problema de esa opción es que si muevo la carpeta o le cambio el nombre, tendría que volver a escribir la ruta para que todo funcione. Al crear un proyecto eso deja de ser una preocupación. 
+Una de las ventajas de RStudio es que permite crear "proyectos". Un proyecto es un espacio o contexto de trabajo asociado a una carpeta en particular, en la que se guardan nuestro(s) script(s), archivos de datos, etc. Cuando creamos un proyecto en RStudio, se crea un tipo especial de archivo que termina en .Rproj. Este archivo vincula todo lo que se encuentra dentro de esa carpeta. 
 
-¿Cómo crear un projecto? Puedes hacerlo desde el menú File > New Proyect. 
+¿Por qué esto es útil? Si parte de nuestro script, por ejemplo, implica abrir un archivo que está en la carpeta de nuestro proyecto, no necesito indicar en mi código dónde se encuentra ese archivo en mi computadora. Lo que hará RStudio será buscarlo en el entorno/carpeta del proyecto. Si movemos la carpeta a otro lugar de nuestra computadora o la compartimos con otra persona, nuestro código seguirá funcionando, ya que el archivo .Rproj mantendrá todo unido. 
+
+Si no creara un proyecto, tendría que indicar al inicio de mi script cuál es la ruta de la carpeta que ocuparé como espacio de trabajo. El problema de esa opción es que si muevo la carpeta o le cambio el nombre, tendría que volver a escribir la ruta para que todo funcione. Al crear un proyecto eso deja de ser una preocupación. 
+
+Cuando uno no usa proyectos, es común ver que los scripts comienzan con la función `setwd("[ruta al directorio donde se encuentra el script]")`. Por ejemplo `setwd("C:\Laura\Stats")`.  Esta es una costumbre arraigada entre muchos expertos de R que usan R desde antes que existiera la posibilidad de usar poryectos dentro de RStudio (e incluso desde antes de que existiera RStudio). La práctica actual recomendada es trabajar usando proyectos.
+
+¿Cómo crear un proyecto? Podés hacerlo desde el menú File > New Proyect. 
 
 <a href="url"><img src="https://github.com/lauracion/R_Curso_de_Nivelacion/blob/master/images/rstudio_newproject1.png" align="center" width="50%"></a>
 
@@ -133,26 +139,25 @@ La siguiente pregunta es qué tipo de proyecto queremos crear. En esta ocasión,
 
 <a href="url"><img src="https://github.com/lauracion/R_Curso_de_Nivelacion/blob/master/images/rstudio_newproject3.png" align="center" width="50%"></a>
 
-Finalmente, le damos un nombre al proyecto y decidimos en qué parte de nuestro computador queremos que viva la carpeta que lo contiene. 
+Finalmente, le damos un nombre al proyecto y decidimos en qué parte de nuestra computadora queremos que viva la carpeta que lo contiene. 
 
 <a href="url"><img src="https://github.com/lauracion/R_Curso_de_Nivelacion/blob/master/images/rstudio_newproject4.png" align="center" width="50%"></a>
 
-Luego de apretar _Create Project_, RStudio se reinicia y se producen algunos cambios. El panel _Files_ (abajo a la derecha) ahora nos muestra la carpeta de nuestro proyecto y el único archivo que hay en ella por ahora. Ese es el archivo mágico que mantiene unido todo lo que hay dentro de la carpeta. Cuando queramos volver a trabajar en nuestro proyecto, solo tenemos que abrir ese archivo. 
+Luego de apretar _Create Project_, RStudio se reinicia y se producen algunos cambios. El panel _Files_ (abajo a la derecha) ahora nos muestra la carpeta de nuestro proyecto y el único archivo que hay en ella por ahora. Ese es el archivo "mágico" que mantiene unido todo lo que hay dentro de la carpeta. Cuando queramos volver a trabajar en nuestro proyecto, sólo tenemos que abrir ese archivo. 
 
 <a href="url"><img src="https://github.com/lauracion/R_Curso_de_Nivelacion/blob/master/images/rstudio_rproj.png" align="center" width="50%"></a>
 
-Otro cambio que ocurre es que en la barra superior aparece ahora la ruta de la carpeta de nuestro projecto. 
+Otro cambio que ocurre es que en la barra superior aparece ahora la ruta de la carpeta de nuestro proyecto. 
 
 <a href="url"><img src="https://github.com/lauracion/R_Curso_de_Nivelacion/blob/master/images/rstudio_barraproyecto.png" align="center" width="100%"></a>
 
-Por último, algo cambia en el ícono de R: aparece el nombre que le dimos a nuestro proyecto:
+Por último, algo cambia en el ícono de R, aparece el nombre que le dimos a nuestro proyecto:
 
 <a href="url"><img src="https://github.com/lauracion/R_Curso_de_Nivelacion/blob/master/images/rstudio_icono.png" align="center" width="12%"></a>
 
+Esto último es _enormemente_ útil. RStudio ejecuta sesiones independientes de R para cada proyecto. Es decir, si tuvieras otro proyecto abierto te aparecería otro ícono, con su respectivo nombre. Esto nos permite trabajar en dos proyectos en paralelo sin que se nos mezclen los objetos y variables del entorno, el código, los archivos, etc. Cada cosa en su lugar facilita que cometamos muchos menos errores.
 
-Esto último es muy muy muy útil: RStudio ejecuta sesiones independientes de R para cada proyecto. Es decir, si tuvieras otro proyecto abierto te aparecería otro ícono, con su respectivo nombre. Esto nos permite trabajar en dos proyectos en paralelo sin que se nos mezclen los objetos del entorno, el código, los archivos, etc. Cada cosa en su lugar.
-
-Ya tenemos todo listo para empezar :)
+Ya tenemos todo listo para empezar a trabajar con datos.
 
 ## Cargar los paquetes necesarios
 
