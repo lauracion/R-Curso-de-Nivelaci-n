@@ -143,7 +143,7 @@ Finalmente, le damos un nombre al proyecto y decidimos en qué parte de nuestra 
 
 <a href="url"><img src="https://github.com/lauracion/R_Curso_de_Nivelacion/blob/master/images/rstudio_newproject4.png" align="center" width="50%"></a>
 
-Luego de apretar _Create Project_, RStudio se reinicia y se producen algunos cambios. El panel _Files_ (abajo a la derecha) ahora nos muestra la carpeta de nuestro proyecto y el único archivo que hay en ella por ahora. Ese es el archivo "mágico" que mantiene unido todo lo que hay dentro de la carpeta. Cuando queramos volver a trabajar en nuestro proyecto, sólo tenemos que abrir ese archivo. 
+Luego de apretar _Create Project_, RStudio se reinicia y se producen algunos cambios. El panel _Files_ (abajo a la derecha) ahora nos muestra la carpeta de nuestro proyecto y el único archivo que hay en ella por ahora. Ese es el archivo "mágico" que mantiene unido todo lo que hay dentro de la carpeta. 
 
 <a href="url"><img src="https://github.com/lauracion/R_Curso_de_Nivelacion/blob/master/images/rstudio_rproj.png" align="center" width="50%"></a>
 
