@@ -407,46 +407,56 @@ babynames %>%
 
 Lo que hizo `summarize` fue resumir toda la información que le pedimos en una tabla (un nuevo `tibble` u objeto de datos que incluye los tres estadísticos que pedimos). 
 
-Es probable que la cantidad de decimales que te aparecen sea distinta. Depende de la configuración de cada equipo.
+Es probable que la cantidad de decimales que te aparece sea distinta. Depende de la configuración de cada equipo.
 
 ### Distintos tipos de sintaxis
 
-Más arriba comentamos que el Tidyverse era un conjunto de paquetes que compartía un mismo enfoque de trabajo con los datos. Una de las características de este enfoque se relaciona con la forma de escribir el código, es decir, con su _sintaxis_. La sintaxis de los paquetes del Tidiverse utilizan el operador ` %>% ` que vimos más arriba, que permite organizar el código de modo que lo leamos de arriba hacia abajo y de izquierda a derecha (la orientación que suele tener nuestra lectura). 
+Más arriba comentamos que el Tidyverse era un conjunto de paquetes que compartía un mismo enfoque de trabajo con los datos. Una de las características de este enfoque se relaciona con la forma de escribir el código, es decir, con su _sintaxis_. 
 
-Hagamos una comparación. Si quisiéramos contar la cantidad de Aryas usando la sintaxis propia del Tidyverse, lo haríamos así:
+La sintaxis de los paquetes del Tidyverse utiliza el operador ` %>% ` que vimos más arriba. El pipe permite organizar el código de modo que lo leamos de arriba hacia abajo y de izquierda a derecha (la orientación que suele tener nuestra lectura). 
+
+Hagamos una comparación entre la sintaxis del Tidyverse y la sintaxis de R base. Si quisiéramos contar la cantidad de Aryas usando la sintaxis propia del Tidyverse, lo haríamos así:
+
 ```r
 babynames %>% 
     filter(name == "Arya") %>% 
     summarize(sum(n))
 ```
 
-Si hiciéramos lo mismo utilizando la sintaxis "tradicional" (la de R base) nuestro código se vería así:
+Si hiciéramos lo mismo usando la sintaxis "tradicional" (la de R base) nuestro código se vería así:
 
 ```r
 sum(babynames$n[babynames$name == "Arya"])
 ```
-Ambos códigos hacen exactamente lo mismo y llegan al mismo resultado: 8866 (puedes probar ejecutándolo). La diferencia es que el primero que escribimos (usando ` %>% `) "desempaqueta" las acciones, lo que lo hace más intuitivo de leer. En el caso del segundo, tenemos que leer de adentro hacia afuera para comprender la secuencia de acciones realizadas sobre los datos. Además, para facilitar la comprensión, los paquetes del Tidyverse suelen tener nombres de funciones que resultan transparentes (aunque están en inglés, claro). 
 
-Existen algunos tipos de análisis estadísticos para los que no es posible aplicar la sintaxis del Tidyverse, tipos de datos con los que no es compatible o situaciones en las que, por un tema de procesamiento (muchos datos), resulta mejor usar la sintaxis de R base. La buena noticia es que con el tiempo y uso, uno se va acostumbrando a esa manera de escribir el código. 
+Ambos códigos hacen exactamente lo mismo y llegan al mismo resultado: 8866. Probá ejecutándolo. 
 
-De todos modos, para la mayoría de las operaciones de importación, limpieza, exploración y manipulación de datos rectangulares podemos utilizar la sintaxis del Tidyverse sin problema. 
+La diferencia es que el primero que escribimos (usando ` %>% `) "desempaqueta" las acciones, lo que lo hace más intuitivo de leer. En el caso del segundo, tenemos que leer de adentro hacia afuera para comprender la secuencia de acciones realizadas sobre los datos. Además, para facilitar la comprensión, los paquetes del Tidyverse suelen tener nombres de funciones que resultan transparentes (aunque están en inglés, claro). 
+
+Existe algunos tipos de análisis estadísticos para los que no es posible aplicar la sintaxis del Tidyverse, tipos de datos con los que no es compatible o situaciones en las que, por un tema de procesamiento (muchos datos), resulta mejor usar la sintaxis de R base (u otras como las de `data.table`). La buena noticia es que con el tiempo y uso, uno se va acostumbrando a esa manera de escribir el código. 
+
+De todos modos, para la mayoría de las operaciones de importación, limpieza, exploración y manipulación de datos rectangulares podemos utilizar la sintaxis del Tidyverse sin problema.
+
+Muy pocas personas "hablan" R tan bien como para escribirlo fluídamente. La mayoría de los mortales solemos buscar en Google cómo hacer la mayoría de lo que queremos hacer. Es muy común copiar, pegar y modificar código de otros usuarios. Afortunadamente, la comunidad de usuarios de R es muy prolífica. De hecho, es posible encontrar formas de escribir R en varias sintaxis. Si uno está trabajando usando el Tidyverse, conviene agregar la palabra Tidyverse en la búsqueda para obtener resultados que sigan esa sintaxis.
 
 ### Creación de objetos
 
-Hasta el momento hemos realizado una serie de acciones sobre el objeto `babynames`: hemos filtrado información y hemos hecho cálculos en una variable. Sin embargo, el objeto no ha sido alterado. Si vuelves imprimir en la consola el contenido de ese objeto, tendrás los mismos resultados que al principio.
+Hasta el momento hemos realizado una serie de acciones sobre el objeto `babynames`: hemos filtrado información y hemos hecho cálculos en una variable. Sin embargo, el tibble `babynames` no cambió. Si volvés a imprimir en la consola el contenido de ese objeto, tendrás los mismos resultados que al principio.
 
 ```r
 babynames
 ```
 <a href="url"><img src="https://github.com/lauracion/R_Curso_de_Nivelacion/blob/master/images/objeto_babynames.png" width="70%"></a>
 
-Imagina que nos interesa guardar los datos sobre la cantidad de Aryas porque seguiremos trabajando solo con ellos y el resto no nos interesa. Para no tener que filtrar cada vez que los queramos ocupar, nos conviene crear un nuevo objeto. En R eso lo hacemos con el símbolo de asignación: `<-`. ¿Cómo funciona? Lo que está a la izquierda del símbolo de asignación es el objeto que queremos crear y lo que está a su derecha es el valor que queremos asignarle. Así:
+Imaginá que nos interesa guardar los datos sobre la cantidad de Aryas porque seguiremos trabajando sólo con ellos y el resto no nos interesa. Para no tener que filtrar cada vez que los queramos usar, conviene crear un nuevo objeto. 
+
+En R eso lo hacemos con el símbolo de asignación: `<-`. ¿Cómo funciona? Lo que está a la izquierda del símbolo de asignación es el objeto que queremos crear y lo que está a su derecha es el valor que queremos asignarle. Así:
 
 ```r
 aryas <- babynames %>% 
     filter(name == "Arya")
 ```
-Este código crea un nuevo objeto llamado `aryas`, cuyo valor contiene lo que resulta de aplicar un filtro a `babynames`. Si ejecutas ese código, no aparecerá nada nuevo en la consola (solo el código que acabas de ejecutar). Sin embargo, en nuestro _Global Enviroment_ (el panel de arriba a la derecha) aparecerá el objeto que hemos creado:
+Este código crea un nuevo objeto llamado `aryas`, cuyo valor contiene lo que resulta de aplicar un filtro a `babynames`. Si ejecutás ese código, no aparecerá nada nuevo en la consola (salvo el código que acabás de ejecutar). Sin embargo, en nuestro _Global Enviroment_ (el panel de arriba a la derecha) aparecerá el objeto que creamos:
 
 <a href="url"><img src="https://github.com/lauracion/R_Curso_de_Nivelacion/blob/master/images/aryas.png" align="center" width="40%"></a>
 
@@ -457,13 +467,13 @@ aryas
 ```
 <a href="url"><img src="https://github.com/lauracion/R_Curso_de_Nivelacion/blob/master/images/objeto_aryas.png" align="center" width="70%"></a>
 
-Hacer clic sobre cualquier objeto del _Global Environmet_ es equivalente a aplicar la función `View()`. Haz la prueba: si haces clic sobre `aryas`, se abrirá una nueva pestaña en el panel de tu script en el que verás el objeto como una planilla. En la consola, aparecerá automáticamente el código para realizar esa acción `View(aryas)`.
+Hacer clic sobre cualquier objeto del _Global Environmet_ es equivalente a aplicar la función `View()`. Hacé la prueba: si hacés clic sobre `aryas`, se abrirá una nueva pestaña en el panel de tu script en el que verás el objeto como una planilla. En la consola, aparecerá automáticamente el código para realizar esa acción `View(aryas)`.
 
-NOTA: el comando abreviado para `<-` es `alt` + `-`.
+NOTA: el atajo de teclado para escribir `<-` es `alt` + `-`.
 
 ## Más funciones para explorar y manipular datos
 
-Trabajemos ahora con el paquete `gapminder`. Este paquete contiene una parte de los datos de Gapminder, una base de datos que incluye información mundial sobre población, expectativa de vida, PIB per cápita y otros. Su autor, Hans Rosling, ha hecho varias [charlas TED](https://www.ted.com/playlists/474/the_best_hans_rosling_talks_yo) que vale la pena mirar.
+Trabajemos ahora con el paquete `gapminder`. Este paquete contiene una parte de los datos de Gapminder, una base de datos que incluye información mundial sobre población, expectativa de vida, PBI per cápita y otros. Su autor, Hans Rosling, fue un médico sueco que trabaja en salud global y era una gran orador. [Aquí algunas de sus charlas imperdibles](https://www.ted.com/playlists/474/the_best_hans_rosling_talks_yo).
 
 
 Podemos dar una mirada inicial a los datos usando las funciones que ya revisamos:
@@ -473,7 +483,7 @@ str(gapminder)
 head(gapminder)
 tail(gapminder)
 ```
-Además, puedes buscar ayuda sobre este paquete y así tener más información sobre qué mide cada variable:
+Además, podés buscar ayuda sobre este paquete y así tener más información sobre qué es cada variable:
 
 ```r
 ?gapminder
@@ -484,6 +494,12 @@ Las variables que incluye son país (`country`), continente (`continent`), año 
 names(gapminder)
 ```
 <a href="url"><img src="https://github.com/lauracion/R_Curso_de_Nivelacion/blob/master/images/names_gapminder.png" align="center" width="70%"></a>
+
+Otra función muy útil para conocer nuestros datos es `summary()`.
+```r
+summary(gapminder)
+```
+<a href="url"><img src="https://github.com/lauracion/R_Curso_de_Nivelacion/blob/master/images/summary.png" align="center" width="70%"></a>
 
 ### Filtrar casos
 
