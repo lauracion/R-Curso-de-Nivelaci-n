@@ -41,7 +41,7 @@ En este curso usaremos tres paquetes: `gapminder`, `babynames` y `tidyverse`. Lo
 
 Para instalarlos, 
 
-1. copia el siguiente código:
+1. copiá el siguiente código:
 
 ```r
 install.packages("tidyverse")
@@ -49,11 +49,11 @@ install.packages("gapminder")
 install.packages("babynames")
 ```
 
-2. pégalo en la consola (_Console_) de RStudio:
+2. pegálo en la consola (_Console_) de RStudio:
 
 ![](https://github.com/lauracion/R_Curso_de_Nivelacion/blob/master/images/install.packages.png)
 
-3. presiona 'enter'. 
+3. presioná 'enter'. 
 Dependiendo de tu conexión a internet instalar todos los paquetes podría tomar unos minutos. El resultado se debería ver parecido a esto:
 
 ![](https://github.com/lauracion/R_Curso_de_Nivelacion/blob/master/images/paquetes_instalados.png)
@@ -63,32 +63,33 @@ Dependiendo de tu conexión a internet instalar todos los paquetes podría tomar
 #### Warnings / Errores
 Si no tienes la última versión de R, puede que aparezca un "Warning" durante la instalación, que te avisa que el paquete fue construido bajo otra versión de R. Un "Warning" es distinto a un error: R ejecuta el código que le pidas, pero advierte que no todo puede resultar como esperas. Cuando aparece un error, en cambio, el código no se ejecuta. 
 
-*_IMPORTANTE:_* Es esencial que todo el procedimiento de instalación se haga antes de concurrir en forma presencial al Curso de Nivelación. Caso contrario, es posible que no puedas practicar en tu computadora los pasos que siguen durante el curso.
+### IMPORTANTE
+Es esencial que todo el procedimiento de instalación se haga antes de concurrir en forma presencial al Curso de Nivelación. Caso contrario, es posible que no puedas practicar en tu computadora los pasos que siguen durante el curso.
 
 _________
 
 
 ## Utilización de RStudio
 
-Como señalamos antes, RStudio es un entorno que facilita el trabajo con R. Si solo abres R en tu computador, lo que verás es una consola. Cuando trabajamos en ella escribimos directamente el código que queremos que se ejecute. El signo `>` nos indica que R está listo y esperando que escribamos algo.
+Como señalamos antes, RStudio es un entorno que facilita el trabajo con R. Si sólo abrís R en tu computadora, lo que verás es una consola. Cuando trabajamos en ella escribimos directamente el código que queremos que se ejecute. El signo `>` nos indica que R está listo y esperando que escribamos algo.
 
 <a href="url"><img src="https://github.com/lauracion/R_Curso_de_Nivelacion/blob/master/images/r_consola.png" align="center" height="400"></a>
 
-Si abres RStudio verás que te aparece la misma consola, pero además te encontrarás con otros paneles. Estos paneles nos ayudan a organizar nuestro trabajo y hacen todo el proceso más sencillo. 
+Si abrís RStudio verás que te aparece la misma consola, pero además te encontrarás con otros paneles. Estos paneles nos ayudan a organizar nuestro trabajo y hacen todo el proceso más sencillo. 
 
 ![](https://github.com/lauracion/R_Curso_de_Nivelacion/blob/master/images/rstudio.png)
 
-¿Para qué sirven estos paneles? Comentemos primero el panel de abajo a la derecha. Si te fijas, el panel tiene varias ventanas: 
+¿Para qué sirven estos paneles? Comentemos primero el panel de abajo a la derecha. Si te fijás, el panel tiene varias ventanas: 
 
-* __Files__ muestra el directorio (la carpeta) en la que te encuentras actualmente. En mi caso, no hay nada ahí porque por defecto RStudio me muestra el Escritorio (_Desktop_) y no tengo nada en él. Es posible que a ti te muestre otra carpeta (por ejemplo, _Documentos_). 
+* __Files__ muestra el directorio (la carpeta) en la que te encuentras actualmente. En el caso de la imagen, no hay nada ahí porque por defecto RStudio me muestra el Escritorio (_Desktop_) y no hay nada en él. Es posible que te muestre otra carpeta (por ejemplo, _Documentos_). 
 
 <a href="url"><img src="https://github.com/lauracion/R_Curso_de_Nivelacion/blob/master/images/rstudio_files.png" align="center" width="50%"></a>
 
-* __Plots__ es el lugar donde aparecerán los gráficos que vayas creando. No hemos hecho ninguno por ahora, así que este panel también está vacío. 
+* __Plots__ es el lugar donde aparecerán los gráficos que crees. No hicimos ninguno por ahora, así que este panel también está vacío. 
 
 <a href="url"><img src="https://github.com/lauracion/R_Curso_de_Nivelacion/blob/master/images/rstudio_plots.png" align="center" width="50%"></a>
 
-* __Packages__ muestra la lista de paquetes que tienes instalados en tu computador. Si recorres el panel verás que algunos tiene una marca al lado izquierdo. Eso quiere decir que el paquete está activo en ese momento (ya veremos cómo hacer eso). Solo los paquetes vinculados a R base se activan al abrir RStudio. 
+* __Packages__ muestra la lista de paquetes que tenés instalados en tu computadora. Si recorrés el panel verás que algunos tienen una marca a la izquierda. Eso quiere decir que el paquete está activo en ese momento (ya veremos cómo activar los paquetes que usaremos). Sólo los paquetes vinculados a R base se activan al abrir RStudio. 
 
 <a href="url"><img src="https://github.com/lauracion/R_Curso_de_Nivelacion/blob/master/images/rstudio_packages.png" align="center" width="50%"></a>
 
@@ -96,15 +97,17 @@ Si abres RStudio verás que te aparece la misma consola, pero además te encontr
 
 <a href="url"><img src="https://github.com/lauracion/R_Curso_de_Nivelacion/blob/master/images/rstudio_help.png" align="center" width="50%"></a>
 
-* __Viewer__ es el panel para ver contenido web generado por algún paquete de R (gráficos para la web o aplicaciones interactivas). Por el momento no lo utilizaremos. 
+* __Viewer__ es el panel para ver contenido web generado por algún paquete de R (gráficos para la web o aplicaciones interactivas - sí, leiste bien, con RStudio se pueden hacer aplicaciones interactivas). Por el momento no lo utilizaremos. 
 
-El panel de arriba a la derecha, por su parte, contiene el historial de funciones que hemos ejecutado (_History_), la opción para generar conexiones a bases de datos externas (_Connections_) y el _Environment_. Este último panel es muy importante y entender lo que nos muestra es fundamental para comprender cómo funciona R. 
+El panel de arriba a la derecha, por su parte, contiene el historial de funciones que ejecutamos (_History_). ¿Qué dice tu _History_? 
+
+La opción para generar conexiones a bases de datos externas (_Connections_) y el _Environment_. Este último panel es muy importante y entender lo que nos muestra es fundamental para comprender cómo funciona R. 
 
 <a href="url"><img src="https://github.com/lauracion/R_Curso_de_Nivelacion/blob/master/images/rstudio_globalenvironment.png" align="center" width="50%"></a>
 
-Por ahora está vacío porque no hemos creado ningún objeto o variable, pero cuando creemos alguno es aquí donde aparecerá. Ya volveremos a hablar sobre este panel cuando comenzemos a trabajar con datos. 
+Por ahora está vacío porque no hemos creado ninguna variable ni ningún otro objeto, pero cuando creemos alguno es aquí donde aparecerá. Volveremos a hablar sobre este panel cuando comenzemos a trabajar con datos. 
 
-Hay un cuarto panel (que probablemente todavía no te aparece)  y que es el que utilizamos para escribir el código que queremos que R ejecute, es decir, el panel para nuestro _script_. Para crear un nuevo script podemos:
+Hay un cuarto panel (que probablemente todavía no te aparece)  y que es el que utilizamos para escribir el código que queremos que R ejecute, es decir, el panel para nuestro _script_ (o secuencia de comandos). Para crear un nuevo script podemos:
 * ir a File > New File > R Script
 * ocupar el atajo de teclado `comando` + `shift` + `n` (Mac) o `control` + `shift` + `n` (Linux / Windows)
 * o seleccionar la opción desde la barra superior de la ventana:
@@ -112,9 +115,6 @@ Hay un cuarto panel (que probablemente todavía no te aparece)  y que es el que 
 <a href="url"><img src="https://github.com/lauracion/R_Curso_de_Nivelacion/blob/master/images/nuevo_script.png" align="center" width="60%"></a>
 
 ¡Ahora ya están los cuatro paneles!
-
-NOTA: si alguna vez has utilizado Git o Github, lo que diré a continuación tendrá algo de sentido. Si no, puedes omitir este comentario y seguir a la sección siguiente. 
-Si te fijas, en el panel en que está la consola hay una segunda pestaña: el/la Terminal. Esto es muy útil, ya que, por ejemplo, si tu proyecto lo tienes alojado en Github, no tienes que salir de R para hacer commit a los cambios que has hecho: puedes hacerlo directamente desde RStudio. 
 
 ### Creación de un proyecto 
 
