@@ -60,7 +60,9 @@ install.packages("babynames")
 3. presioná 'enter'. 
 Dependiendo de tu conexión a internet instalar todos los paquetes podría tomar unos minutos. El resultado se debería ver parecido a esto:
 
+
 ![](https://github.com/lauracion/R_Curso_de_Nivelacion/blob/master/images/paquetes_instalados.png)
+
 
 ¿Salió todo bien? ¡Excelente! Felicitaciones. Ya escribiste tus primeras tres líneas de código en R.
 
