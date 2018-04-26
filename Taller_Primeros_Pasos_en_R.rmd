@@ -741,8 +741,8 @@ ggplot(data = gapminder_CL)
 Tanto `ggplot` como `geom_line` son funciones y, como tales, si se respeta el orden de los argumentos, se puede simplificar el código de la siguiente forma:
 
 ```r
-ggplot(gapminder_CL) 
-    + geom_line(aes(year, gdpPercap))
+ggplot(gapminder_CL) +
+    geom_line(aes(year, gdpPercap))
 ```
 
 Como explicábamos para `head` antes, `ggplot` esperará que lo primero que se indique sean los datos. Por su parte, `geom_line` espera que el primer y segundo argumento sean las variables del eje x e y, respectivamente. Nuevamente, siempre que se respete el orden de los argumentos, se puede simplicar el código.
