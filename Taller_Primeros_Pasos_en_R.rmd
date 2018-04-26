@@ -714,6 +714,50 @@ gapminder_CL <- gapminder %>%
     mutate(PIB_pesos = gdpPercap * 595)
 ```
 
+### Graficando los datos
+
+Una parte importante del análisis de datos es visualizarlos en distintos gráficos. Con cualquiera de los objetos que contienen datos podríamos hacer gráficos usando la el paquete `ggplot2` dentro del Tidyverse. 
+
+`ggplot` propone una gramática de gráficos que se construyen por capas. Para hacer un gráfico con esta gramática tenemos que indicar cuáles son los datos, qué tipo de gráfico vamos a usar y cómo se van 'mapear' las variables (eje x e y, en este caso).
+
+```r
+ggplot(data = gapminder_CL) + 
+    geom_line(mapping = aes(x = year, y = gdpPercap))
+```
+
+Vas a ver que este gráfico aparece en _Plots_ en la ventana de abajo a la derecha de RStudio.
+
+En este caso, el signo `+` su usa para agregar capas a nuestro gráfico. `ggplot()` sólo establece un sistema de coordenadas sobre el cual se agrega el gráfico propiamente dicho. 
+
+Es muy importante que el signo `+` esté en la misma línea de la función que lo antecede para que el código funcione.
+
+Probá ejecutar:
+
+```r
+ggplot(data = gapminder_CL) 
+    + geom_line(mapping = aes(x = year, y = gdpPercap))
+```
+
+Tanto `ggplot` como `geom_line` son funciones y, como tales, si se respeta el orden de los argumentos, se puede simplificar el código de la siguiente forma:
+
+```r
+ggplot(gapminder_CL) 
+    + geom_line(aes(year, gdpPercap))
+```
+
+Como explicábamos para `head` antes, `ggplot` esperará que lo primero que se indique sean los datos. Por su parte, `geom_line` espera que el primer y segundo argumento sean las variables del eje x e y, respectivamente. Nuevamente, siempre que se respete el orden de los argumentos, se puede simplicar el código.
+
+La función `ggplot` también puede incluirse dentro del código que utilizamos para filtrar la base de datos. Es decir, no tenemos por qué crear un objeto distinto con los datos de Chile para poder graficar sólo esos datos. 
+
+```r
+gapminder %>% 
+    filter(country == "Chile") %>% 
+    ggplot() + geom_line(aes(year, gdpPercap))
+``` 
+    
+La única diferencia es que en `ggplot` no es necesario indicar cuáles son los datos porque ya que lo indicamos al principio del código.
+
+
 ### Cambiar el nombre de una variable
 
 Más arriba creamos un nuevo objeto filtrando los casos sudamericanos. Si seguís en la misma sesión, el objeto `gapminder_sudamerica` debería estar aún en tu Global Environment. Si no, podés volver a ejecutar el código con que lo creamos o, si guardaste el archivo csv, podés cargarlo usando la función inversa a `write_csv()`: `read_csv()`.
