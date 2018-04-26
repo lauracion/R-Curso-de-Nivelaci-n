@@ -720,7 +720,7 @@ Más arriba creamos un nuevo objeto filtrando los casos sudamericanos. Si seguí
 
 Los archivos que guardan datos en formato de texto plano y cuyas columnas se separan por comas son del tipo "separados por coma" y suelen terminar en `.csv` (abreviatura de comma separated values). 
 
-Probémos usar `read_csv()`. Cerremos RStudio. Luego, desde el directorio donde armamos el proyecto, volvamos a abrir este proyecto haciendo clic en el archivo .Rproj. Ejecutemos las líneas de código que comienzan con `library` para cargar los paquetes con los que estábamos trabajando nuevamente. Si quisiéramos importar el archivo `gapminder_sudamerica.csv` para recuperar lo que hicimos en la sesión anterior bataría con ejecutar:
+Probemos usar `read_csv()`. Cerremos RStudio. Luego, desde el directorio donde armamos el proyecto, volvamos a abrir este proyecto haciendo clic en el archivo .Rproj. Ejecutemos las líneas de código que comienzan con `library` para cargar los paquetes con los que estábamos trabajando nuevamente. Si quisiéramos importar el archivo `gapminder_sudamerica.csv` para recuperar lo que hicimos en la sesión anterior bataría con ejecutar:
 
 ```r
 gapminder_sudamerica <- read_csv("gapminder_sudamerica.csv")
@@ -733,7 +733,7 @@ Lo que le estamos pidiendo a R con esta función es que
 
 (NOTA: Si ejecutás este código y ya tenés un objeto llamada `gapminder_sudamerica` en tu Global Environmet, lo que hará R será sobreescribirlo).
 
-Esa es la forma de importar datos en R: le pedimos que lea un archivo y asigne los datos que ahí encuentre a un objeto en nuestro entorno de trabajo. Lo más importante a tener en cuenta es que al importar esos datos __el archivo original no se modifica__. Es decir, todas las acciones que realicemos en R solo afectarán al objeto que creamos en nuestra sesión, no al archivo .csv que está en tu computadora. La única forma de alterarlo sería que sobreescribiésemos el archivo con `write_csv()`. 
+Esa es la forma de importar datos en R. Le pedimos que lea un archivo y asigne los datos que ahí encuentre a un objeto en nuestro entorno de trabajo. Lo más importante a tener en cuenta es que al importar esos datos __el archivo original no se modifica__. Es decir, todas las acciones que realicemos en R solo afectarán al objeto que creamos en nuestra sesión, no al archivo .csv que está en tu computadora. La única forma de alterarlo sería que sobreescribiésemos el archivo con `write_csv()`. 
 
 Hay muchísimas opciones más para la importación de este tipo de archivo (y también de casi cualquier otro tipo de archivos con datos) en R.
 
@@ -760,14 +760,17 @@ gapminder_sudamerica <- gapminder_sudamerica %>%
 
 ### Seleccionar variables
 
-Andes de volver a guardar nuestro objeto como csv, haremos un último cambio. Nuestros datos solo incluyen los datos de Sudamérica, por lo que la variable `continent` es poco informativa. Reescribiremos el objeto sin incluirla. Necesitamos, entonces, una función que nos permita seleccionar columnas. Como en el Tidyverse todo trata de ser transparente, la función se llama `select()` (_seleccionar_). Cuando usamos esa función, lo que indicamos en su interior es el nombre de las columnas que queremos seleccionar. Veamos un ejemplo. Agregaremos `View()` al final del bloque de código para ver el resultado:
+Antes de volver a guardar nuestro objeto como un archivo `.csv`, haremos un último cambio. Nuestros datos sólo incluyen los datos de Sudamérica, por lo que la variable `continent` es poco informativa. Reescribiremos el objeto sin incluirla. Necesitamos, entonces, una función que nos permita seleccionar columnas. 
+
+Como en el Tidyverse todo trata de ser transparente, la función se llama `select()` (_seleccionar_). Cuando usamos esa función, lo que indicamos en su interior es el nombre de las columnas que queremos seleccionar. Veamos un ejemplo. Agregaremos `View()` al final del bloque de código para ver el resultado:
 
 ```r
 gapminder_sudamerica %>% 
     select(pais, anio, expec_vida, poblacion, PIB_percap) %>% 
     View()
 ```
-Perfecto. Lo que hicimos en este caso fue indicar el nombre de las columnas que queremos mantener. 
+Perfecto. Lo que hicimos en este caso fue indicar el nombre de las columnas que queremos mantener.
+
 Pero más que mantener columnas, lo que queríamos hacer era deshacernos de `continente` y eso podemos hacerlo de una manera mucho más rápida: diciéndole a R qué es lo que no queremos conservar. Así:
 
 ```r
@@ -775,7 +778,7 @@ gapminder_sudamerica %>%
     select(-continente) %>% 
     View()
 ```
-¡El resultado es el mismo! Al anteponer un `-` al nombre de la columna, le decimos a R que queremos conservar todas excepto esa. Es muy práctico si nuestra base tiene muchas variables y solo queremos eliminar unas pocas.
+El resultado es el mismo. Al anteponer un `-` al nombre de la columna, le decimos a R que queremos conservar todas excepto esa. Es muy práctico si nuestra base tiene muchas variables y solo queremos eliminar unas pocas.
 
 Guardemos ahora nuestro objeto:
 
@@ -785,7 +788,7 @@ gapminder_sudamerica %>%
     write_csv("gapminder_sudamerica.csv")
 ```
 
-Si no quieres que sobreescriba el que ya tenías (con los nombres de las variables en inglés) ponle otro nombre al archivo.
+Si no querés que sobreescriba el que ya tenías (con los nombres de las variables en inglés) ponéle otro nombre al archivo.
 
 ## Eso es todo por ahora
 
