@@ -65,7 +65,7 @@ Dependiendo de tu conexión a internet instalar todos los paquetes podría tomar
 ¿Salió todo bien? ¡Excelente! Felicitaciones. Ya escribiste tus primeras tres líneas de código en R.
 
 #### Warnings / Errores
-Si no tienes la última versión de R, puede que aparezca un "Warning" durante la instalación, que te avisa que el paquete fue construido bajo otra versión de R. Un "Warning" es distinto a un error: R ejecuta el código que le pidas, pero advierte que no todo puede resultar como esperas. Cuando aparece un error, en cambio, el código no se ejecuta. 
+Si no tenés la última versión de R, puede que aparezca un "Warning" durante la instalación, que te avisa que el paquete fue construido bajo otra versión de R. Un "Warning" es distinto a un error: R ejecuta el código que le pidas, pero advierte que no todo puede resultar como esperas. Cuando aparece un error, en cambio, el código no se ejecuta. 
 
 _________
 
