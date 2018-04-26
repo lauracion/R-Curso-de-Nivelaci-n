@@ -566,7 +566,7 @@ gapminder %>%
                 c("Argentina", "Bolivia", "Brazil", 
                   "Chile", "Colombia", "Ecuador", 
                   "Paraguay", "Peru", "Uruguay", "Venezuela")) %>% 
-        View()
+    View()
 ```
 
 Si esta selección de casos nos interesa y tenemos intención de seguir usándola, nos conviene guardarla como un nuevo objeto usando el operador `<-`. Esto permite que no tengamos que volver a escribir un criterio de filtrado tan largo cuando queramos volver a trabajar con esos datos.
@@ -610,29 +610,14 @@ gapminder %>%
             c("Argentina", "Bolivia", "Brazil", 
               "Chile", "Colombia", "Ecuador", 
               "Paraguay", "Peru", "Uruguay", "Venezuela")) %>%
-        write_csv("gapminder_sudamerica.csv")
+    write_csv("gapminder_sudamerica.csv")
 ```
 En este último caso, no indicamos el primer argumento, ya que los datos que se deben considerar para guardar el objeto se generan en los pasos previos del código.
 
 
-#### ¿Y si cierro RStudio y quiero cargar los datos desde un archivo cuyos datos están separados por comas?
-
-Los archivos cuyos datos se separan por comas suelen terminar en `.csv` (abreviatura de comma separated values). Cerremos RStudio ahora. Luego, desde el directorio donde armamos el proyecto, volvamos a abrir este proyecto haciendo clic en el archivo .Rproj.
-
-Ejecutemos las líneas de código que comienzan con `library` para cargar los paquetes con los que estábamos trabajando nuevamente. Si quisiéramos importar el archivo `gapminder_sudamerica.csv` para recuperar lo que hicimos en la sesión anterior bataría con ejecutar:
-
-```r
-mi_gapminder <- 
-    read_csv("gapminder_sudamerica.csv")
-```
-Notarás que el tibble `mi_gapminder` aparece en el _Global Environment_.
-
-`read_csv` es la función del paquete `readr` que se puede usar para importar archivos `.csv`. Hay muchísimas opciones más para la importación de este tipo de archivo (y también de casi cualquier otro tipo de archivos con datos) en R.
-
-
 ### Ordenar los casos
 
-Imagina que nos interesa conocer la expectativa de vida de América del Norte, Centro y Sur. El último registro que contiene la base es de 2007, así que simplemente podríamos revisar los datos aplicando ese filtro y agregando View al final para mirarlos todos en una nueva pestaña:
+Supongamos que nos interesa conocer la expectativa de vida de América del Norte, Centro y Sur. El último registro que contiene la base es de 2007, así que simplemente podríamos revisar los datos aplicando ese filtro y agregando View al final para mirarlos todos en una nueva pestaña:
 
 ```r
 gapminder %>% 
@@ -650,7 +635,7 @@ gapminder  %>%
 <a href="url"><img src="https://github.com/lauracion/R_Curso_de_Nivelacion/blob/master/images/arrange_lifeExp.png" align="center" width="80%"></a>
 
 
-¡Ahora es más fácil mirar los resultados! Podemos ver que en la región, Haití, Bolivia y Trinidad y Tobago son los países con una menor expectativa de vida. 
+¡Ahora es más fácil mirar los resultados! Podemos ver que, en la región en 2007, Haití, Bolivia y Trinidad y Tobago son los países con menor expectativa de vida. 
 
 Por defecto, `arrange()` organiza los datos de menor a mayor. ¿Y si quisiéramos ver el orden inverso?. En ese caso, tendríamos que indicar que el orden que nos interesa es el descendiente: `desc()`. Explicitamos esto dentro de la función `arrange()`:
 
@@ -665,14 +650,14 @@ Un error habitual (muy habitual) es que se nos olvide algún paréntesis en nues
 
 <a href="url"><img src="https://github.com/lauracion/R_Curso_de_Nivelacion/blob/master/images/R_espera_mas.png" align="center" width="80%"></a>
 
-En vez del signo `>`, que es el que nos indica que R terminó de ejecutar la acción anterior y que está dispuesto a aceptar nuevos comandos, aparece un `+`. Lo que quiere decirnos R con esto es que algo falta en el código que acabamos de ejecutar. 
-Uno de los aspectos positivos de RStudio es que para que no nos ocurra esto, tratará de advertirnos sobre este tipo de errores cuando pueda identificarlos. Si hubiéramos olvidado el último paréntesis en nuestro script, RStudio habría hecho esto:
+En vez del signo `>`, que es el que nos indica que R terminó de ejecutar la acción anterior y que está dispuesto a aceptar nuevos comandos, aparece un `+`. Lo que quiere decir R con esto es que algo falta en el código que acabamos de ejecutar. 
+Uno de los aspectos positivos de RStudio es que para que no ocurra esto, tratará de advertirnos sobre este tipo de errores cuando pueda identificarlos. Si hubiéramos olvidado el último paréntesis en nuestro script, RStudio habría hecho esto:
 
 <a href="url"><img src="https://github.com/lauracion/R_Curso_de_Nivelacion/blob/master/images/error_parentesis.png" align="center" width="60%"></a>
 
 Al costado izquierdo de la línea en que identifica el error, habría aparecido una alerta. 
 
-Olvidar un paréntesis o una coma es uno de los errores más habituales, así que es muy muy útil que RStudio nos ayude a indentificar problemas en nuestro script. 
+Olvidar un paréntesis o una coma es uno de los errores más habituales, así que es muy útil que RStudio nos ayude a indentificar problemas en nuestro script. 
 
 ### Agrupar
 
@@ -684,6 +669,7 @@ gapminder %>%
     summarize(mean(lifeExp))
 ```
 El resultado es 67 años. Este dato no es muy informativo respecto de las diferencias que podrían existir por continente. ¿Cómo podríamos desagregar esa información? Para estos casos, la función `group_by()` resulta muy útil:
+
 ```r
 gapminder %>% 
     filter(year == 2007) %>%
@@ -691,10 +677,10 @@ gapminder %>%
     summarize(mean(lifeExp))
 ```
 Lo que les estamos pidiendo a R es que:
-* tome el objeto `gapminder`, luego,
-* que filtre los casos del año 2007, luego,
-* que agrupe los casos de acuerdo a la variable continente, luego
-* que haga un resumen de la información que sale de calcular la media de la variable expectativa de vida. 
+* tome el objeto `gapminder`, luego (` %>% `)
+* que filtre (` filter `) los casos del año 2007, luego (` %>% `)
+* que agrupe (` group_by `) los casos de acuerdo a la variable continente, y luego (` %>% `)
+* que haga un resumen (` summarize `) de la información que sale de calcular la media de la variable expectativa de vida (` mean(lifeExp) `). 
 
 
 <a href="url"><img src="https://github.com/lauracion/R_Curso_de_Nivelacion/blob/master/images/group_by.png" align="center" width="80%"></a>
@@ -705,9 +691,9 @@ Esto nos permite tener una mejor idea de las diferencias que existen en la expec
 
 Muchas veces necesitamos agregar a nuestros datos nuevas variables. La función que nos permite hacer eso es `mutate()`. Veamos un ejemplo. 
 
-La variable gdpPercap mide el ingreso per cápita en dólares. ¿Cómo podríamos agregar una variable a nuestros datos que incluya el valor en otra moneda? Una opción sería multiplicar la variable que ya tenemos por el valor actual de conversión de esa moneda. Para hacer esto, utilizaremos la función `mutate`. Al usarla, indicamoa el nombre que queremos que tenga la nueva variable y qué valor queremos que tenga. Como lo que queremos es asignar un valor, usaremos `=`: `mutate(nombre_nueva_variable = su_valor)`.
+La variable gdpPercap mide el ingreso per cápita en dólares. ¿Cómo podríamos agregar una variable a nuestros datos que incluya el valor en otra moneda? Una opción sería multiplicar la variable que ya tenemos por el valor actual de conversión de esa moneda. Para hacer esto, utilizaremos la función `mutate`. Al usarla, indicamos el nombre que queremos que tenga la nueva variable y qué valor queremos que tenga. Como lo que queremos es asignar un valor, usaremos `=`: `mutate(nombre_nueva_variable = su_valor)`.
 
-El siguiente es un ejemplo local. Filtraremos los datos de Chile, donde el valor de conversión del dólar (para hoy) es de 595 pesos. 
+El siguiente es un ejemplo chileno (como la autora original de este tutorial). Filtraremos los datos de Chile, donde el valor de conversión del dólar es, por ejemplo, de 595 pesos. 
 
 ```r
 gapminder %>% 
@@ -716,11 +702,11 @@ gapminder %>%
 ```
 Lo que le estamos pidiendo a R es que 
 
-* tome el objeto gapminder, luego,
-* que filtre los casos correspondientes a Chile, luego, 
-* que cree una variable llamada `PIB_pesos`, cuyo valor sea el de la variable `gdpPercap` multiplicado por 595 (el valor de hoy del dólar).
+* tome el objeto gapminder, luego
+* filtre los casos correspondientes a Chile, luego 
+* cree una variable llamada `PIB_pesos`, cuyo valor sea el de la variable `gdpPercap` multiplicado por 595 (el valor del dólar en pesos chilenos).
 
-Con la operación que acabamos de hacer solo creamos momentáneamente la variable para la sección de datos que filtramos. Para poder guardarla de manera definitiva tendríamos que crear un nuevo objeto que la incluya. Lo llamaremos `gapminder_CL`.
+Con la operación que acabamos de hacer sólo creamos momentáneamente la variable para la sección de datos que filtramos. Para poder guardarla de manera definitiva tendríamos que crear un nuevo objeto que la incluya. Lo llamaremos `gapminder_CL`.
 
 ```r
 gapminder_CL <- gapminder %>% 
@@ -730,7 +716,11 @@ gapminder_CL <- gapminder %>%
 
 ### Cambiar el nombre de una variable
 
-Más arriba creamos un nuevo objeto filtrando los casos sudamericanos. Si sigues en la misma sesión, el objeto `gapminder_sudamerica` debería estar aún en tu Global Environment. Si no, puedes volver a ejecutar el código con que lo creamos o, si guardaste el archivo csv, puedes cargarlo usando la función inversa a `write_csv()`: `read_csv()`.
+Más arriba creamos un nuevo objeto filtrando los casos sudamericanos. Si seguís en la misma sesión, el objeto `gapminder_sudamerica` debería estar aún en tu Global Environment. Si no, podés volver a ejecutar el código con que lo creamos o, si guardaste el archivo csv, podés cargarlo usando la función inversa a `write_csv()`: `read_csv()`.
+
+Los archivos que guardan datos en formato de texto plano y cuyas columnas se separan por comas son del tipo "separados por coma" y suelen terminar en `.csv` (abreviatura de comma separated values). 
+
+Probémos usar `read_csv()`. Cerremos RStudio. Luego, desde el directorio donde armamos el proyecto, volvamos a abrir este proyecto haciendo clic en el archivo .Rproj. Ejecutemos las líneas de código que comienzan con `library` para cargar los paquetes con los que estábamos trabajando nuevamente. Si quisiéramos importar el archivo `gapminder_sudamerica.csv` para recuperar lo que hicimos en la sesión anterior bataría con ejecutar:
 
 ```r
 gapminder_sudamerica <- read_csv("gapminder_sudamerica.csv")
@@ -741,16 +731,17 @@ Lo que le estamos pidiendo a R con esta función es que
 * le asigne como valor (`<-`)
 * los datos incluidos en el csv `gapminder_sudamerica.csv`
 
-(NOTA: Si ejecutas este código y ya tienes un objeto llamada `gapminder_sudamerica` en tu Global Environmet, lo que hará R será sobreescribirlo).
+(NOTA: Si ejecutás este código y ya tenés un objeto llamada `gapminder_sudamerica` en tu Global Environmet, lo que hará R será sobreescribirlo).
 
+Esa es la forma de importar datos en R: le pedimos que lea un archivo y asigne los datos que ahí encuentre a un objeto en nuestro entorno de trabajo. Lo más importante a tener en cuenta es que al importar esos datos __el archivo original no se modifica__. Es decir, todas las acciones que realicemos en R solo afectarán al objeto que creamos en nuestra sesión, no al archivo .csv que está en tu computadora. La única forma de alterarlo sería que sobreescribiésemos el archivo con `write_csv()`. 
 
-Esa es la forma de importar datos en R: le pedimos que lea un archivo y asigne los datos que ahí encuentre a un objeto en nuestro entorno de trabajo. Lo más importante a tener en cuenta es que al importar esos datos __el archivo original no se modifica__. Es decir, todas las acciones que realicemos en R solo afectarán al objeto que creamos en nuestra sesión, no al archivo .csv que está en tu computador. La única forma de alterarlo sería que sobreescribiésemos el archivo con `write_csv()`. 
+Hay muchísimas opciones más para la importación de este tipo de archivo (y también de casi cualquier otro tipo de archivos con datos) en R.
 
-Que R no altere el archivo original no solo es bueno porque evita que por error arruinemos nuestros datos, sino también porque hace más transparente y reproducible nuestro trabajo: cualquier persona con el archivo original y nuestro script puede reconstruir el análisis que hicimos. 
+Que R no altere el archivo original no solo es bueno porque evita que, por error, arruinemos nuestros datos, sino también porque hace más transparente y reproducible nuestro trabajo. Cualquier persona con el archivo original y nuestro script puede reconstruir el análisis que hicimos. 
 
-Si ya tienes el objeto `gapminder_sudamerica` en tu Global Environment, podemos seguir. 
+Si ya tenés el objeto `gapminder_sudamerica` en tu Global Environment, podemos seguir. 
 
-En estos datos todos los nombres de las variables se encuentran en inglés. Podemos chequear eso CON una función que vimos más arriba: `names()`:
+En estos datos todos los nombres de las variables se encuentran en inglés. Podemos chequear eso con una función que vimos más arriba: `names()`:
 
 ```r
 names(gapminder_sudamerica)
@@ -761,9 +752,11 @@ Para cambiar los nombres de las variables podemos utilizar la función `rename()
 
 ```r
 gapminder_sudamerica <- gapminder_sudamerica %>% 
-    rename(pais = country, continente = continent, anio = year, expec_vida = lifeExp, poblacion = pop, PIB_percap = gdpPercap)
+    rename(pais = country, continente = continent, 
+           anio = year, expec_vida = lifeExp, 
+           poblacion = pop, PIB_percap = gdpPercap)
 ```
-¡Listo! Ahora los nombres de las variables están traducidos. Para chequearlo, luego de ejecutar el código anterior puedes volver a aplicar la función `names()` o puedes revisar los datos con alguna de las funciones que vimos antes, como `View()`, `str()` o `head()`.
+¡Listo! Ahora los nombres de las variables están traducidos. Para chequearlo, luego de ejecutar el código anterior, podés volver a aplicar la función `names()` o podés revisar los datos con alguna de las funciones que vimos antes, como `View()`, `str()` o `head()`.
 
 ### Seleccionar variables
 
