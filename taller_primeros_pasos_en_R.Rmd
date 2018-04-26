@@ -29,15 +29,15 @@ Si quedó todo bien instalado, cuando abras RStudio deberías ver algo así:
 
 ![](https://github.com/lauracion/R_Curso_de_Nivelacion/blob/master/images/rstudio.png)
 
-En este tutorial usaremos al última versión de R y RStudio, así que si tienes instalada una versión previa, puede que algunas cosas se vean un poco distintas.
+En este curso usaremos la última versión de R y RStudio, así que si tenés instalada una versión previa, puede que algunas cosas se vean un poco distintas.
 
-IMPORTANTE: Si te aparece algún error durante este proceso, lo más probabable es que sea por alguna configuración de tu sistema operativo. En ese caso, la mejor manera de buscar una solución es copiar el error que arroja R, pegarlo en tu motor de búsqueda favorito y ver cómo alguien que se enfrentó a eso antes lo resolvió. 
+IMPORTANTE: Si aparece algún error durante este proceso, lo más probabable es que sea por alguna configuración de tu sistema operativo. En ese caso, la mejor manera de buscar una solución es copiar el error que arroja R, pegarlo en, por ejemplo, Google y ver cómo alguien que se enfrentó a eso antes lo resolvió. Si no lográs solucionarlo, veremos problemas que hayan surgido personalmente durante el transcurso del curso.
 
 ## Instalación de los paquetes de R que utilizaremos
 
-Cuando instalamos R por primera vez en nuestro computador, lo que estamos instalando es lo que se conoce como "R Base", es decir, los elementos centrales del lenguaje de programación. Una de las ventajas de R es que se trata de un lenguaje extensible: la propia comunidad de usuarios puede desarrollar nuevas posibilidades para utilizarlo. La manera de compartir estos nuevos desarrollos es a través de "paquetes", que incluyen, entre otras cosas, código y datos. Una analogía que se suele utilizar para explicar esto es que R Base es un teléfono celular tal como viene de fábrica y los paquetes las _apps_ que descargamos para que tenga más funcionalidades. 
+Cuando instalamos R por primera vez en la computadora, lo que estamos instalando es lo que se conoce como "R Base", es decir, los elementos centrales del lenguaje de programación. Una de las ventajas de R es que se trata de un lenguaje extensible: la propia comunidad de usuarios puede desarrollar nuevas posibilidades para utilizarlo. La manera de compartir estos nuevos desarrollos es a través de "paquetes", que incluyen, entre otras cosas, código y datos. Una analogía que se suele utilizar para explicar esto es que R Base es un teléfono celular tal como viene de fábrica y los paquetes las _apps_ que descargamos para que tenga más funcionalidades. 
 
-En este tutorial usaremos tres paquetes: `gapminder`, `babynames` y `tidyverse`. Los dos primeros (`gapminder` y `babynames`) son paquetes que incluyen datos que nos servirán para algunos de los ejercicios que realizaremos. `tidyverse`, por su parte, es un "megapaquete" que incluye otros paquetes en su interior. Todos los paquetes que conforman "el Tidyverse" comparten la misma visión sobre el trabajo con datos y la escritura de código. Quizás ahora eso suene un poco enigmático, pero más adelante explicaremos qué quiere decir. 
+En este curso usaremos tres paquetes: `gapminder`, `babynames` y `tidyverse`. Los dos primeros (`gapminder` y `babynames`) son paquetes que incluyen datos que nos servirán para algunos de los ejercicios que realizaremos. `tidyverse`, por su parte, es un "megapaquete" que incluye otros paquetes en su interior. Todos los paquetes que conforman "el Tidyverse" comparten la misma visión sobre el trabajo con datos y la escritura de código. Quizás ahora eso suene un poco enigmático, pero más adelante explicaremos qué quiere decir. 
 
 Para instalarlos, 
 
@@ -54,14 +54,19 @@ install.packages("babynames")
 ![](https://github.com/lauracion/R_Curso_de_Nivelacion/blob/master/images/install.packages.png)
 
 3. presiona 'enter'. 
-El último paquete es un poco más pesado que el resto, así que, dependiendo de tu conexión, podría tomar un minuto. El resultado se debería ver parecido a esto:
+Dependiendo de tu conexión a internet instalar todos los paquetes podría tomar unos minutos. El resultado se debería ver parecido a esto:
 
 ![](https://github.com/lauracion/R_Curso_de_Nivelacion/blob/master/images/paquetes_instalados.png)
 
-¿Salió todo bien? ¡Excelente! Ya escribiste tus primeras líneas de código :)
+¿Salió todo bien? ¡Excelente! Felicitaciones. Ya escribiste tus primeras tres líneas de código en R.
 
 #### Warnings / Errores
-Si no tienes la última versión de R, puede que aparezca un "Warning" durante la instalación, que te avisa que el paquete fue construido bajo otra versión de R. Un "Warning" es distinto a un error: R ejecuta el código que le pides, pero te advierte que no todo puede resultar como esperas. Cuando aparece un error, en cambio, el código no se ejecuta. 
+Si no tienes la última versión de R, puede que aparezca un "Warning" durante la instalación, que te avisa que el paquete fue construido bajo otra versión de R. Un "Warning" es distinto a un error: R ejecuta el código que le pidas, pero advierte que no todo puede resultar como esperas. Cuando aparece un error, en cambio, el código no se ejecuta. 
+
+*_IMPORTANTE:_* Es esencial que todo el procedimiento de instalación se haga antes de concurrir en forma presencial al Curso de Nivelación. Caso contrario, es posible que no puedas practicar en tu computadora los pasos que siguen durante el curso.
+
+_________
+
 
 ## Utilización de RStudio
 
