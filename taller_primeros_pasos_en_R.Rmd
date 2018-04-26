@@ -733,6 +733,6 @@ Si no quieres que sobreescriba el que ya tenías (con los nombres de las variabl
 
 * RStudio tiene resúmenes muy útiles llamados cheatsheets que se pueden encontrar [aquí](https://www.rstudio.com/resources/cheatsheets/). Algunos de ellos cuentan con traducciones al españols (`Ctrl + F` y `Spanish`).
 
-* Un tutorial sobre aspectos básicos de R usando mayormente la gramática clásica de R base puede encontrarse en este tutorial elaborado para un curso de [Fundación Sadosky](http://www.fundacionsadosky.org.ar/mailings/pcd/intro.html).
+* Un tutorial sobre aspectos básicos de R usando mayormente la gramática clásica de R base puede encontrarse en este tutorial elaborado para un curso de [Fundación Sadosky](http://www.fundacionsadosky.org.ar/mailings/pcd/intro.html). También están disponibles las clases [1](http://www.fundacionsadosky.org.ar/pcd-salud/introduccion_R.pdf), [2](http://www.fundacionsadosky.org.ar/pcd-salud/analisis_exploratorio.html) y [3](http://www.fundacionsadosky.org.ar/pcd-salud/dataviz.pdf) del curso "Análisis de Datos en Salud" organizado por Fundación Sadosky en 2016.
 
 * R es un lenguaje de programación de código abierto con una comunidad muy activa que constantemente aporta materiales nuevos. Varios usuarios hispanohablantes han empezado a generar una [lista de recursos en español](https://github.com/rladies/recursos_en_espanol) que poco a poco va creciendo. 
