@@ -11,29 +11,33 @@ library(gapminder)
 
 # MIRADA INICIAL A LOS DATOS
 
-gapminder # el paquete que descargamos contiene un objeto con la base de datos. Al escribir su nombre se imprimen las 10 primeras líneas y la cantidad de columnas qu caben en el ancho de página.
-View(gapminder) # muestra la base completa en otra pestaña
-str(gapminder) # imprime información sobre el dataset y las variables
-glimpse(gapminder) # imprime las primeras observaciones de cada variable
-head(gapminder) # imprime las seis primeras líneas
-tail(gapminder) # imprime las últimas seis líneas (muy útil para chequear si la base que cargamos está completa)
+
+babynames # El paquete que descargamos contiene un objeto con la base de datos. 
+          # Al escribir su nombre se imprimen las 10 primeras líneas y la cantidad de 
+          # columnas que caben en el ancho de página.
+View(babynames) # muestra la base completa en otra pestaña
+str(babynames) # imprime información sobre el dataset y las variables
+glimpse(babynames) # imprime las primeras observaciones de cada variable
+head(babynames) # imprime las seis primeras líneas
+tail(babynames) # imprime las últimas seis líneas (muy útil para chequear si la base que cargamos está completa)
 
 
 #COMPARAR CÓDIGOS: tidyverse / R base
 
-# Imagina que queremos saber cuánto fue el PIB de los países de Asia en el 2007.  
-# En R base lo podríamos averiguar así: 
-sum(select(filter(gapminder, year == 2007, continent == "Asia"), gdpPercap)) # el código se entiende desde adentro hacia afuera. 
+# Imagina que queremos saber cuánto fue el PBI de los países de Asia en el 2007.  
 
-# Tidyverse: el código funciona como leemos: de izquierda a derecha y de arriba hacia abajo. Para ello, se utiliza el operador ' %>% ', que en inglés se llama "pipe" y se puede leer como "luego" o "a continuación".
+# Tidyverse: el código funciona como leemos: de izquierda a derecha y de arriba hacia abajo. Para ello, se utiliza el 
+# operador ' %>% ', que en inglés se llama "pipe" y se puede leer como "luego" o "a continuación".
 
 gapminder %>% # tomar la base gapminder, luego
     filter(year == 2007, continent == "Asia") %>% # filtrar, luego
     select(gdpPercap) %>% #seleccionar la variable PIB, luego
     sum() # sumar 
 
-# las dos formas de escribir el código llevan al mismo resultado.
+# En R base lo podríamos averiguar así: 
+sum(select(filter(gapminder, year == 2007, continent == "Asia"), gdpPercap)) # el código se entiende desde adentro hacia afuera. 
 
+# las dos formas de escribir el código llevan al mismo resultado.
 
 # FILTRAR
 # con la función filter() podemos filtrar casos
@@ -41,7 +45,8 @@ gapminder %>% # tomar la base gapminder, luego
 gapminder %>% 
     filter(country == "Chile")
 
-# el objeto gapminder no ha cambiado. Si queremos mantener el filtro, tenemos que crear un objeto nuevo. Podemos hacerlo usando el operador <- 
+# el objeto gapminder no ha cambiado. Si queremos mantener el filtro, tenemos que crear un objeto nuevo. 
+# Podemos hacerlo usando el operador <- 
 
 gapminder_CL <- gapminder %>% 
     filter(country == "Chile")
@@ -50,7 +55,7 @@ gapminder_CL <- gapminder %>%
 
 gapminder_CL
 
-# el nuevoobjeto solo contiene los datos filtrados
+# el nuevo objeto sólo contiene los datos filtrados
 
 
 # Ahora que tenemos ese objeto, podemos hacer una gráfico usando ggplot, en el que indicamos cuáles son los datos, qué tipo de gráfico vamos a utilizar y cómo se van 'mapear' las variables (eje x e y, en este caso)
