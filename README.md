@@ -1,19 +1,6 @@
-# RLadies Santiago
-Presentaciones, scripts y materiales creados para R-Ladies Santiago
+# R: Curso de Nivelación
+Presentaciones, scripts y materiales creados para Curso de Nivelación con R
 
-* __Meetup septiembre 2017: introtextanalysis.pdf__
+* __taller_primeros_pasos_en_R.Rmd__
 
-Presentación de algunos paquetes y sus posibilidades para el análisis de textos
-
-* __Meetup noviembre 2017: intro_tidyverse.pdf__
-
-Taller sobre algunas funciones de dplyr y ggplot2
-
-* __Meetup diciembre 2017: mensajes_presidenciales.pdf__
-
-Presentación sobre proyecto de análisis de discursos presidenciales.
-Meetup conjunto con el Grupo de Usuarios de R en Chile y la comunidad de PowerBI
-
-* __Meetup abril 2018: taller_primeros_pasos_en_R.Rmd__
-
-Tutorial elaborado a partir del taller de introducción a R. 
+Tutorial elaborado a partir del taller de introducción a R. Originalmente desarrollado por @rivaquiroga [aquí](https://github.com/rivaquiroga/RLadies-Santiago/blob/master/2018-04_taller_primeros_pasos_en_R.Rmd) 
