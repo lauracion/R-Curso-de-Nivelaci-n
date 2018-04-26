@@ -769,14 +769,12 @@ Si no quieres que sobreescriba el que ya tenías (con los nombres de las variabl
 
 ## Eso es todo por ahora
 
-¡Hay mucho más que aprender! Por ejemplo, a modo de curiosidad, agrego que este texto se ha generado desde RStudio.
-
-¿Por dónde seguir?
+¡Hay mucho más que aprender! ¿Por dónde seguir?
 
 * Si sabés inglés, la sugerencia es trabajar con el libro de Garrett Grolemund y Hadley Wickham [R for Data Science](https://R4DS.had.nz.co). Con ese libro se puede profundizar en lo cubierto en este tutorial, pero sobre todo apropiarse de un proceso de trabajo con datos con un enfoque moderno y en constante actualización.
 
-* RStudio tiene resúmenes muy útiles llamados cheatsheets que se pueden encontrar [aquí](https://www.rstudio.com/resources/cheatsheets/). Algunos de ellos cuentan con traducciones al españols (`Ctrl + F` y `Spanish`).
+* RStudio tiene síntesis muy útiles llamadas "cheatsheets" que se pueden encontrar [aquí](https://www.rstudio.com/resources/cheatsheets/). Algunas de ellas cuentan con traducciones al español (para encontrarlas en la página de RStudio tipeá `Ctrl + F` y luego `Spanish` en la caja de búsqueda tu navegador).
 
-* Un tutorial sobre aspectos básicos de R usando mayormente la gramática clásica de R base puede encontrarse en este tutorial elaborado para un curso de [Fundación Sadosky](http://www.fundacionsadosky.org.ar/mailings/pcd/intro.html). También están disponibles las clases [1](http://www.fundacionsadosky.org.ar/pcd-salud/introduccion_R.pdf), [2](http://www.fundacionsadosky.org.ar/pcd-salud/analisis_exploratorio.html) y [3](http://www.fundacionsadosky.org.ar/pcd-salud/dataviz.pdf) del curso "Análisis de Datos en Salud" organizado por Fundación Sadosky en 2016.
+* Un tutorial sobre aspectos básicos de R usando mayormente la gramática tradicional de R base puede encontrarse en este tutorial elaborado para un curso de [Fundación Sadosky](http://www.fundacionsadosky.org.ar/mailings/pcd/intro.html). También están disponibles las clases [1](http://www.fundacionsadosky.org.ar/pcd-salud/introduccion_R.pdf), [2](http://www.fundacionsadosky.org.ar/pcd-salud/analisis_exploratorio.html) y [3](http://www.fundacionsadosky.org.ar/pcd-salud/dataviz.pdf) del curso "Análisis de Datos en Salud" organizado por Fundación Sadosky en 2016.
 
 * R es un lenguaje de programación de código abierto con una comunidad muy activa que constantemente aporta materiales nuevos. Varios usuarios hispanohablantes han empezado a generar una [lista de recursos en español](https://github.com/rladies/recursos_en_espanol) que poco a poco va creciendo. 
