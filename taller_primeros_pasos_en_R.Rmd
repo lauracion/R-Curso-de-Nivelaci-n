@@ -2,11 +2,11 @@
 
 ### Modificado por Laura Ación (original de [Riva Quiroga](https://twitter.com/rivaquiroga), [R-Ladies Santiago, Chile](https://www.meetup.com/rladies-scl/))
 
-El objetivo de este Taller es acompañar a principiantes en el proceso que va desde la instalación de R a la manipulación inicial de datos. 
+El objetivo de este curso es acompañar a principiantes en el proceso que va desde la instalación de R a la manipulación inicial de datos. 
 
 La idea es que sea algo práctico y a la vez suficientemente explicativo como para que se entienda qué es lo que hace cada bloque de código.
 
-El tutorial contiene imágenes, con el fin de ir ilustrando el proceso tal como debería verse en tu computadora.
+El curso contiene imágenes, con el fin de ir ilustrando el proceso tal como debería verse en tu computadora.
 
 _________
 
