@@ -1,10 +1,12 @@
 # Primeros pasos en R
 
-### Riva Quiroga
+### Modificado por Laura Ación (original de [Riva Quiroga](https://twitter.com/rivaquiroga), [R-Ladies Santiago, Chile](https://www.meetup.com/rladies-scl/))
 
+El objetivo de este Taller es acompañar a principiantes en el proceso que va desde la instalación de R a la manipulación inicial de datos. 
 
-> ¡Hola! Este tutorial toma como base el taller de introducción a R que realizé para [RLadies Santiago](https://meetup.com/rladies-scl). Su objetivo es acompañar a principiantes en el proceso que va desde la instalación de R a la manipulación inicial de datos. La idea es que sea algo práctico, y a la vez suficientemente explicativo como para que se entienda qué es lo que hace cada bloque de código. El tutorial contiene imágenes, con el fin de ir ilustrando el proceso tal como debieses verlo en tu computador. Puede que se vean un poco pequeñas si abres esta página desde tu teléfono móvil.
-Si te pareció útil, tienes algún comentario o una petición de tema para un futuro tutorial, [puedes contactarme por acá.](https://twitter.com/rivaquiroga)
+La idea es que sea algo práctico, y a la vez suficientemente explicativo como para que se entienda qué es lo que hace cada bloque de código.
+
+El tutorial contiene imágenes, con el fin de ir ilustrando el proceso tal como debería verse en tu computadora. (https://twitter.com/rivaquiroga)
 
 _________
 
