@@ -499,7 +499,7 @@ Otra función muy útil para conocer nuestros datos es `summary()`.
 ```r
 summary(gapminder)
 ```
-<a href="url"><img src="https://github.com/lauracion/R_Curso_de_Nivelacion/blob/master/images/summary.png" align="center" width="70%"></a>
+<a href="url"><img src="https://github.com/lauracion/R_Curso_de_Nivelacion/blob/master/images/summary.png" align="center" width="80%"></a>
 
 ### Filtrar casos
 
