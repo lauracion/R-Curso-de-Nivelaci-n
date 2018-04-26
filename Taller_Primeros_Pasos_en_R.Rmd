@@ -1,6 +1,6 @@
 # Curso: Primeros pasos en R
 
-### Modificado por Laura Ación (original de [Riva Quiroga](https://twitter.com/rivaquiroga), [R-Ladies Santiago, Chile](https://www.meetup.com/rladies-scl/))
+### Modificado por Laura Ación (original de [Riva Quiroga](https://twitter.com/rivaquiroga))
 
 El objetivo de este curso es acompañar a principiantes en el proceso que va desde la instalación de R a la manipulación inicial de datos. 
 
@@ -23,10 +23,10 @@ En este curso utilizaremos R a través del IDE RStudio.
 
 Para poder instalar R y RStudio, seguí los siguientes pasos:
 
-- Descarga R desde https://cran.r-project.org/. Debes elegir la opción que corresponda, según tu sistema operativo.
-- Instala R en tu computador, tal como lo haces con cualquier programa. 
-- Una vez que R ha quedado correctamente instalado, descarga RStudio desde https://www.rstudio.com/products/rstudio/download/. Elige la primera opción, es decir, "RStudio Desktop Open Source License" (gratuita). 
-- Instala RStudio en tu computador, tal como lo haces con cualquier programa. 
+- Descargá R desde https://cran.r-project.org/. Debés elegir la opción que corresponda, según tu sistema operativo.
+- Instalá R en tu computadora, tal como lo hacés con cualquier programa. 
+- Una vez que R quedó correctamente instalado, descargá RStudio desde https://www.rstudio.com/products/rstudio/download/. Elegí la primera opción, es decir, "RStudio Desktop Open Source License" (gratuita). 
+- Instalá RStudio en tu computadora, tal como lo hacés con cualquier programa. 
 
 Para un paso a paso que incluye imágenes de este proceso de instalación podés ir a [este archivo](https://github.com/lauracion/R_Curso_de_Nivelacion/blob/master/Instalacion_R_RStudio.pdf). 
 Si quedó todo bien instalado, cuando abras RStudio deberías ver algo así:
