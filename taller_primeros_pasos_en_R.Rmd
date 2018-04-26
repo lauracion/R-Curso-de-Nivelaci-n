@@ -4,9 +4,9 @@
 
 El objetivo de este Taller es acompañar a principiantes en el proceso que va desde la instalación de R a la manipulación inicial de datos. 
 
-La idea es que sea algo práctico, y a la vez suficientemente explicativo como para que se entienda qué es lo que hace cada bloque de código.
+La idea es que sea algo práctico y a la vez suficientemente explicativo como para que se entienda qué es lo que hace cada bloque de código.
 
-El tutorial contiene imágenes, con el fin de ir ilustrando el proceso tal como debería verse en tu computadora. (https://twitter.com/rivaquiroga)
+El tutorial contiene imágenes, con el fin de ir ilustrando el proceso tal como debería verse en tu computadora.
 
 _________
 
