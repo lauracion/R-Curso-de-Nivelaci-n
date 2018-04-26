@@ -403,11 +403,11 @@ babynames %>%
     filter(name == "Arya") %>% 
     summarize(sum(n), mean(n), first(year))
 ```
-<a href="url"><img src="https://github.com/lauracion/R_Curso_de_Nivelaciono/blob/master/images/summarize_arya.png" align="center" width="75%"></a>
+<a href="url"><img src="https://github.com/lauracion/R_Curso_de_Nivelacion/blob/master/images/summarize_arya.png" align="center" width="75%"></a>
 
 Lo que hizo `summarize` fue resumir toda la información que le pedimos en una tabla (un nuevo `tibble` u objeto de datos que incluye los tres estadísticos que pedimos). 
 
-[Es probable que la cantidad de decimales que te aparecen sea distinta. Depende de la configuración de cada equipo].
+Es probable que la cantidad de decimales que te aparecen sea distinta. Depende de la configuración de cada equipo.
 
 ### Distintos tipos de sintaxis
 
