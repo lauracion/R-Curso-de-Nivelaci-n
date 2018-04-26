@@ -151,9 +151,7 @@ Otro cambio que ocurre es que en la barra superior aparece ahora la ruta de la c
 
 <a href="url"><img src="https://github.com/lauracion/R_Curso_de_Nivelacion/blob/master/images/rstudio_barraproyecto.png" align="center" width="100%"></a>
 
-Por último, algo cambia en el ícono de R, aparece el nombre que le dimos a nuestro proyecto:
-
-<a href="url"><img src="https://github.com/lauracion/R_Curso_de_Nivelacion/blob/master/images/rstudio_icono.png" align="center" width="12%"></a>
+Cuando cerremos RStudio y queramos volver a trabajar en este proyecto, bastará con ir al directorio que creamos para el proyecto y abrir el archivo .Rproj. 
 
 Esto último es _enormemente_ útil. RStudio ejecuta sesiones independientes de R para cada proyecto. Es decir, si tuvieras otro proyecto abierto te aparecería otro ícono, con su respectivo nombre. Esto nos permite trabajar en dos proyectos en paralelo sin que se nos mezclen los objetos y variables del entorno, el código, los archivos, etc. Cada cosa en su lugar facilita que cometamos muchos menos errores.
 
@@ -161,9 +159,9 @@ Ya tenemos todo listo para empezar a trabajar con datos.
 
 ## Cargar los paquetes necesarios
 
-Ya tenemos instalados los tres paquetes que ocuparemos en esta ocasión. Cada vez que instalamos un paquete, este queda en nuestro computador. Podemos chequear eso revisando el panel "Packages" abajo a la izquierda. Sin embargo, que los hayamos instalado no quiere decir que estén listos para ser usados. Tenemos que decirle explícitamente a R qué paquetes queremos ocupar en cada sesión (no tiene sentido tener activos paquetes que no estamos utilizando).
+Si completaste los pasos de preparación que se habían recomendado antes de venir hoy, ya tenés instalados los paquetes que usarás en el curso. Cada vez que instalamos un paquete queda en nuestra computadora. Podemos chequear eso revisando el panel "Packages" abajo a la derecha. Sin embargo, que los hayamos instalado no quiere decir que estén listos para ser usados. Tenemos que decirle explícitamente a R qué paquetes queremos usar en cada sesión (no tiene sentido tener activos paquetes que no estamos utilizando).
 
-La función para llamar o activar un paquete es `library(nombre_del_paquete)`, así que escribiremos eso al inicio de nuestro script. Si no tienes un script abierto, simplemente sigue los pasos comentados más arriba (File > New File > R Script).
+La función para llamar o activar un paquete es `library(nombre_del_paquete)`, así que escribiremos eso al inicio de nuestro script. Si no tenés un script abierto, simplemente seguí los pasos comentados más arriba (File > New File > R Script).
 
 RStudio trata de hacernos la vida más simple, así que cuando empezamos a escribir se despliega un menú con posibles opciones que indican el nombre de la función y el paquete al que está asociada (en este caso, es una función de R `{base}`). Lo que aparece en amarillo es la estructura de la función, algo sobre lo que hablaremos más adelante.
 
@@ -174,8 +172,7 @@ Lo mismo ocurre cuando empezamos a escribir el nombre del paquete. RStudio nos v
 <a href="url"><img src="https://github.com/lauracion/R_Curso_de_Nivelacion/blob/master/images/sugerencia_argumento.png" align="center" width="50%"></a>
 
 
-Todavía no hemos 'ejecutado' el código, así que nada ha pasado. Como todo en R, hay varias opciones para hacer esto. 
-Si hacemos clic en el botón _Run_ que está en la barra del script, se ejecutará la línea de código en la que está actualmente el cursor y este se moverá automáticamente a la siguiente línea. Es decir, si ponemos el cursor en la línea en la que llamamos por primera vez la función `library` y hacemos clic tres veces, se ejecutarán las tres líneas. 
+Todavía no hemos "ejecutado" el código, así que no pasó nada. Como todo en R, hay varias opciones para hacer esto. Si hacemos clic en el botón _Run_ que está en la barra del script, se ejecutará la línea de código en la que está actualmente el cursor y éste se moverá automáticamente a la siguiente línea. Es decir, si ponemos el cursor en la línea en la que llamamos por primera vez la función `library` y hacemos clic tres veces, se ejecutarán las tres líneas. 
 
 <a href="url"><img src="https://github.com/lauracion/R_Curso_de_Nivelacion/blob/master/images/ejecutar_codigo.png" align="center" width="50%"></a>
 
@@ -191,15 +188,19 @@ Cuando queremos ejecutar más de una línea de código, lo que podemos hacer es 
 
 <a href="url"><img src="https://github.com/lauracion/R_Curso_de_Nivelacion/blob/master/images/codigo_ejecutado.png" align="center" width="50%"></a>
 
-Cuando ejecutamos el código de nuestro script, este pasa a la consola. En el caso del primer paquete (`tidyverse`), la consola nos da dos avisos. El primero, cuáles son todos los paquetes que estamos cargando al cargar el `tidyverse`. Como comentamos antes, este es un megapaquete que incluye otros paquetes en su interior. Al llamarlos a través de `library(tidyverse)` se activan estos 8 paquetes que aparecen consignados (pese a que el Tidyverse incluye más). Eso es lo que nos está avisando R en la consola. El otro aviso es de un "Conflicto". Nos dice que las funciones `filter()`y `lag()` del paquete `dplyr` tienen el mismo nombre que funciones del paquete `stats` (que es parte de R base). Como cargamos `dplyr`después (al instalar `tidyverse`), lo que R nos avisa es que son las funciones de este último paquete las que van a prevalecer por sobre las del paquete `stats`.
+Cuando ejecutamos el código de nuestro script, éste pasa a la consola. En el caso del primer paquete (`tidyverse`), la consola nos da dos avisos. El primero, cuáles son todos los paquetes que estamos cargando al cargar el `tidyverse`. Como comentamos antes, este es un megapaquete que incluye otros paquetes en su interior. Al llamarlos a través de `library(tidyverse)` se activan 8 paquetes (pese a que el Tidyverse incluye más). Eso es lo que nos está avisando R en la consola. El otro aviso es de un "Conflicto". Nos dice que las funciones `filter()`y `lag()` del paquete `dplyr` tienen el mismo nombre que funciones del paquete `stats` (que es parte de R base). Como cargamos `dplyr`después (al instalar `tidyverse`), lo que R nos avisa es que son las funciones de este último paquete las que van a prevalecer por sobre las del paquete `stats`.
 
-__IMPORTANTE__: Lo que hicimos recién fue cargar los paquetes __para esta sesión__ de R que estamos ejecutando actualmente. Si en algún momento cerraras el programa y retomaras este tutorial en otro momento, tendrías que volver a cargarlos. 
+__IMPORTANTE__: Lo que hicimos recién fue cargar los paquetes __para esta sesión__ de R que estamos ejecutando actualmente. Si en algún momento cerraras el programa y retomaras este tutorial en otro momento, tendrías que volver a ejecutar estas líneas. 
 
 ### Buenas prácticas
 
-En este punto es importante sugerir dos buenas prácticas. La primera, es hacer lo que ya hicimos: llamar todos los paquetes que ocuparemos al inicio de nuestro script. De este modo, cuando volvemos a trabajar con él más adelante (u otra persona quiere ejecutarlo) queda claro desde el principio qué paquetes se utilizan (y sería necesario descargar, en caso de no tenerlos). Obviamente, cuando comenzamos a escribir un script no siempre sabemos cuáles son todos los paquetes que necesitaremos. Por eso, si en la mitad del proceso decido usar un nuevo paquete, la buena práctica sería volver a las primeras líneas del script y agregarlo. 
+En este punto es importante sugerir dos buenas prácticas. 
 
-La segunda buena práctica es comentar nuestro script. En R podemos agregar comentarios anteponiendo un `#` al fragmento que cumple esa función. En una línea de nuestro script, todo lo que está después de un `#` no se ejecuta como código. 
+La primera, es hacer lo que ya hicimos: llamar todos los paquetes que usaremos al inicio de nuestro script. De este modo, cuando volvemos a trabajar con él más adelante (u otra persona quiera ejecutarlo) queda claro desde el principio qué paquetes se utilizan (y sería necesario descargar usando `install.packages`, en caso de no tenerlos). 
+
+Obviamente, cuando comenzamos a escribir un script no siempre sabemos cuáles son todos los paquetes que necesitaremos. Por eso, si en la mitad del proceso decido usar un nuevo paquete, la buena práctica sería volver a las primeras líneas del script y agregarlo. 
+
+La segunda buena práctica es comentar nuestro script. En R podemos agregar comentarios anteponiendo un `#` a la línea que contenga un comentario. En una línea de nuestro script, todo lo que está después de un `#` no se ejecuta como código a apretar el botón _Run_. 
 
 ¿Por qué es importante comentar nuestro script? Porque así podemos recordar qué es lo que un determinado fragmento de código hace, o podemos dejar registro de por qué realizamos algo de una determinada manera. Esto es muy útil para que nuestro futuro yo (o las personas con las que compartiremos nuestro script) entiendan lo que hicimos. 
 
@@ -211,9 +212,12 @@ También es útil agregar al inicio de nuestro script una descripción de su obj
 
 <a href="url"><img src="https://github.com/lauracion/R_Curso_de_Nivelacion/blob/master/images/comentario_inicio_script.png" align="center" width="60%"></a>
 
-Si te fijas, nuestro script aún dice Untitled1. Antes de seguir, es importante que lo guardemos. Y lo puedes hacer como en cualquier otro programa: con `Control/Comando` + `S`. RStudio te ofrecerá por defecto guardarlo en la carpeta de tu proyecto. Cuando ya esté guardado, te aparecerá en la pestaña _Files_.  
+Si te fijás, nuestro script aún dice Untitled1. Antes de seguir, es importante que lo guardemos. Y lo podés hacer como en cualquier otro programa: con `Control/Comando` + `S`. RStudio te ofrecerá por defecto guardarlo en la carpeta de tu proyecto. Cuando ya esté guardado, te aparecerá en la pestaña _Files_.  
 
 <a href="url"><img src="https://github.com/lauracion/R_Curso_de_Nivelacion/blob/master/images/guardar_script.png" align="center" width="75%"></a>
+
+Es recomendable aprender a usar atajos del teclado como `Control + S` porque son más rápidos que usar el mouse y apretar botones y ahorran mucho tiempo en el largo plazo.
+
 
 ## Una mirada inicial a los datos
 
