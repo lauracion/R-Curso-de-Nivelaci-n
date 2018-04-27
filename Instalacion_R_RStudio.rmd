@@ -28,7 +28,7 @@ Para poder instalar R y RStudio, seguí los siguientes pasos:
 - Una vez que R quedó correctamente instalado, descargá RStudio desde https://www.rstudio.com/products/rstudio/download/. Eligí la primera opción, es decir, "RStudio Desktop Open Source License" (gratuita). 
 - Instalá RStudio en tu computadora, tal como lo haces con cualquier programa. 
 
-Para un paso a paso que incluye imágenes de paso a paso de este proceso de instalación podés ir a [este archivo](https://github.com/lauracion/R_Curso_de_Nivelacion/blob/master/Instalacion_R_RStudio.pdf). 
+Para un paso a paso que incluye imágenes de este proceso de instalación podés ir a [este archivo](https://github.com/lauracion/R_Curso_de_Nivelacion/blob/master/Instalacion_R_RStudio.pdf). 
 Si quedó todo bien instalado, cuando abras RStudio deberías ver algo que se parece a esto:
 
 ![](https://github.com/lauracion/R_Curso_de_Nivelacion/blob/master/images/rstudio.png)
@@ -37,7 +37,7 @@ En este curso usaremos la última versión de R y RStudio, así que si tenés in
 
 IMPORTANTE: Si aparece algún error durante este proceso, lo más probabable es que sea por alguna configuración de tu sistema operativo. En ese caso, la mejor manera de buscar una solución es copiar el error que arroja R, pegarlo en, por ejemplo, Google y ver cómo alguien que se enfrentó a eso antes lo resolvió. Si no lográs solucionarlo, veremos problemas que hayan surgido personalmente durante el transcurso del curso.
 
-## Instalación de los paquetes de R que utilizaremos
+## Instalación de los paquetes de R que usaremos
 
 Cuando instalamos R por primera vez en la computadora, lo que estamos instalando es lo que se conoce como "R Base", es decir, los elementos centrales del lenguaje de programación. Una de las ventajas de R es que se trata de un lenguaje extensible: la propia comunidad de usuarios puede desarrollar nuevas posibilidades para utilizarlo. La manera de compartir estos nuevos desarrollos es a través de "paquetes", que incluyen, entre otras cosas, código y datos. Una analogía que se suele utilizar para explicar esto es que R Base es un teléfono celular tal como viene de fábrica y los paquetes las _apps_ que descargamos para que tenga más funcionalidades. 
 
