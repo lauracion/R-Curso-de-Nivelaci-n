@@ -716,9 +716,9 @@ gapminder_CL <- gapminder %>%
 
 ### Graficando los datos
 
-Una parte importante del análisis de datos es visualizarlos en distintos gráficos. Con cualquiera de los objetos que contienen datos podríamos hacer gráficos usando la el paquete `ggplot2` dentro del Tidyverse. 
+Una parte importante del análisis de datos es visualizarlos en distintos gráficos. Con cualquiera de los objetos que contienen datos podríamos hacer gráficos usando el paquete `ggplot2` dentro del Tidyverse. 
 
-`ggplot` propone una gramática de gráficos que se construyen por capas. Para hacer un gráfico con esta gramática tenemos que indicar cuáles son los datos, qué tipo de gráfico vamos a usar y cómo se van 'mapear' las variables (eje x e y, en este caso).
+`ggplot` propone una gramática de gráficos que se construyen por capas. Para hacer un gráfico usando `ggplot` tenemos que indicar cuáles son los datos, qué tipo de gráfico vamos a usar y cómo se van 'mapear' las variables (eje x e y, en este caso).
 
 ```r
 ggplot(data = gapminder_CL) + 
@@ -731,7 +731,7 @@ En este caso, el signo `+` su usa para agregar capas a nuestro gráfico. `ggplot
 
 Es muy importante que el signo `+` esté en la misma línea de la función que lo antecede para que el código funcione.
 
-Probá ejecutar:
+Probá ver lo que sucede cuando ejecutás:
 
 ```r
 ggplot(data = gapminder_CL) 
@@ -745,7 +745,7 @@ ggplot(gapminder_CL) +
     geom_line(aes(year, gdpPercap))
 ```
 
-Como explicábamos para `head` antes, `ggplot` esperará que lo primero que se indique sean los datos. Por su parte, `geom_line` espera que el primer y segundo argumento sean las variables del eje x e y, respectivamente. Nuevamente, siempre que se respete el orden de los argumentos, se puede simplicar el código.
+Como explicábamos para `head` antes, `ggplot` esperará que lo primero que se indique sean los datos. Por su parte, `geom_line` espera que el primer y segundo argumento sean las variables del eje x e y, respectivamente. Nuevamente, siempre que se respete el orden de los argumentos, se puede simplificar el código.
 
 La función `ggplot` también puede incluirse dentro del código que utilizamos para filtrar la base de datos. Es decir, no tenemos por qué crear un objeto distinto con los datos de Chile para poder graficar sólo esos datos. 
 
