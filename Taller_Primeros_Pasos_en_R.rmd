@@ -743,7 +743,7 @@ ggplot(data = gapminder_CL)
 
 Vas a notar que en la ventana de abajo a la derecha en _Plots_ desaparece el gráfico anterior y aparece:
 
-<a href="url"><img src="https://github.com/lauracion/R_Curso_de_Nivelacion/blob/master/images/plot2.png" align="center" width="50%"></a>
+<a href="url"><img src="https://github.com/lauracion/R_Curso_de_Nivelacion/blob/master/images/plot2.png" align="center" width="60%"></a>
 
 Cuando el signo `+` no queda en la misma línea que la función que lo antecede sólo se genera la primera capa del gráfico. `ggplot()` sólo genera un cuadro gris.
 
@@ -758,7 +758,7 @@ Como explicábamos para `head` antes, `ggplot` esperará que lo primero que se i
 
 Notá que encima del gráfico hay dos flechas. Probá hacer clic en la que apunta para la izquierda.
 
-<a href="url"><img src="https://github.com/lauracion/R_Curso_de_Nivelacion/blob/master/images/arrows.png" align="center" width="50%"></a>
+<a href="url"><img src="https://github.com/lauracion/R_Curso_de_Nivelacion/blob/master/images/arrows.png" align="center" width="30%"></a>
 
 La función `ggplot` también puede incluirse dentro del código que utilizamos para filtrar la base de datos. Es decir, no tenemos por qué crear un objeto distinto con los datos de Chile para poder graficar sólo esos datos. 
 
