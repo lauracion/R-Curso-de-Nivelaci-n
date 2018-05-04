@@ -870,3 +870,7 @@ Si no querés que sobreescriba el que ya tenías (con los nombres de las variabl
 * Un tutorial sobre aspectos básicos de R usando mayormente la gramática tradicional de R base puede encontrarse en este tutorial elaborado para un curso de [Fundación Sadosky](http://www.fundacionsadosky.org.ar/mailings/pcd/intro.html). También están disponibles las clases [1](http://www.fundacionsadosky.org.ar/pcd-salud/introduccion_R.pdf), [2](http://www.fundacionsadosky.org.ar/pcd-salud/analisis_exploratorio.html) y [3](http://www.fundacionsadosky.org.ar/pcd-salud/dataviz.pdf) del curso "Análisis de Datos en Salud" organizado por Fundación Sadosky en 2016.
 
 * R es un lenguaje de programación de código abierto con una comunidad muy activa que constantemente aporta materiales nuevos. Varios usuarios hispanohablantes han empezado a generar una [lista de recursos en español](https://github.com/rladies/recursos_en_espanol) que poco a poco va creciendo. 
+
+## Tarea para el hogar
+
+En el curso de Claudia Coeli, se usarán los siguientes paquetes `arules`, `summary`, `epiDisplay`, `psych`, `gridExtra`, `ggplot2`, `GGally`, `fpc`, `cluster`, `NbClust`, `stats`.
