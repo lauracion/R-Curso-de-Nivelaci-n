@@ -399,7 +399,7 @@ Con este código le estamos diciendo a R que :
 
 * tome el objeto `babynames` 
 * luego (` %>% `) 
-* que filtre los nombres que sean iguales a Arya (`filter == "Arya"`)
+* que filtre los nombres que sean iguales a Arya (`filter(name == "Arya")`)
 * luego (` %>% `)
 * que resuma (`summarize`) la siguiente información:
 * la suma (`sum`) de los valores de la columna `n`. 
