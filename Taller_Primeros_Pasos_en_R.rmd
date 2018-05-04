@@ -386,7 +386,7 @@ babynames %>%
 
 ### Cómo resumir datos y un poco más acerca del operador ` %>% `
 
-Antes de responder la pregunta que planteamos en la sección anterior, hablemos un poco del símbolo ` %>% `. ¿Qué es ` %>% `? Este símbolo se llama _pipe_ (_tubo_ en inglés) y en el código lo podemos leer como "luego" o "a continuación". El atajo del teclado para realizarlo es `control` + `shift` + `m` (Linux / Windows) o `comando` + `shift` + `m` (Mac.)
+Antes de responder la pregunta que planteamos en la sección anterior, hablemos un poco del símbolo ` %>% `. ¿Qué es ` %>% `? Este símbolo se llama _pipe_ (_tubo_ en inglés) y en el código lo podemos leer como "luego" o "a continuación". El atajo del teclado para realizarlo es `control` + `shift` + `m` (Linux / Windows) o `comando` + `shift` + `m` (Mac).
 
 `%>%`es un operador que nos permite encadenar las acciones que queremos aplicar en un objeto (en este caso, `babynames`). Por ejemplo, si quisiéramos saber a cuántas personas se llaman Arya, podríamos agregar otra función al código que estábamos usando que sume todos los valores de la columna `n` (la que tiene la cantidad de nombres por año). La función que nos sirve para eso es `summarize` (o `summarise`; R acepta inglés norteamericano o británico). Como su nombre lo indica, lo que hace `summarize` es resumir información, según el criterio que le entreguemos. Veamos cómo funciona:
 
@@ -483,7 +483,7 @@ NOTA: el atajo de teclado para escribir `<-` es `alt` + `-`.
 
 ## Más funciones para explorar y manipular datos
 
-Trabajemos ahora con el paquete `gapminder`. Este paquete contiene una parte de los datos de Gapminder, una base de datos que incluye información mundial sobre población, expectativa de vida, PBI per cápita y otros. Su autor, Hans Rosling, fue un médico sueco que trabaja en salud global y era una gran orador. [Aquí algunas de sus charlas imperdibles](https://www.ted.com/playlists/474/the_best_hans_rosling_talks_yo).
+Trabajemos ahora con el paquete `gapminder`. Este paquete contiene una parte de los datos de Gapminder, una base de datos que incluye información mundial sobre población, expectativa de vida, PBI per cápita y otros. Su autor, Hans Rosling, fue un médico sueco que trabajó en salud global y era una gran orador. [Aquí algunas de sus charlas imperdibles](https://www.ted.com/playlists/474/the_best_hans_rosling_talks_yo).
 
 
 Podemos dar una mirada inicial a los datos usando las funciones que ya revisamos:
