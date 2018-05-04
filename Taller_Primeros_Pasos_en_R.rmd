@@ -2,6 +2,16 @@
 
 ### Modificado por Laura Ación (original de [Riva Quiroga](https://twitter.com/rivaquiroga))
 
+## ¿Qué es R?
+
+R es un lenguaje de programación de código abierto (es decir, gratuito y en el que se puede saber exactamente cómo funciona). Por razones históricas, R tiene un fuerte énfasis en el análisis estadístico de datos. Su desarrollo inicial estuvo a cargo de Robert Gentleman y Ross Ihaka del Departamento de Estadística de la Universidad de Auckland en 1993. Desde entonces creció mucho y se ha vuelto un lenguaje muy popular entre quienes analizan datos.
+
+Por su versatilidad, R es muy usado en todas las disciplinas que incluyen datos y, por supuesto, en Ciencia de Datos. Con R se puede programar todo tipo de análisis ya que cuenta con herramientas de matemática y estadística, machine learning, procesamiento de señales (por ejemplo, sonido e imágenes), todo tipo de simulaciones, modelado y testeo estadístico. También se puede analizar Big Data usando R. Con R se obtiene fácilmente visualizaciones de datos de muy buena calidad que pueden ser estáticas, dinámicas o interactivas. R también permite la generación automática de reportes que informan los resultados de análisis de datos a quienes no les interesan los detalles finos de cómo se realizó un análisis. Como con cualquier otro lenguaje de programación, el límite de lo que se puede hacer con R es sólo la imaginación de sus usuarios. 
+
+R es un gran aliado para realizar Ciencia de Datos reproducible tanto por tu yo futuro como por otros con quienes compartas tu trabajo.
+
+## Objetivo del curso
+
 El objetivo de este curso es acompañar a principiantes en el proceso que va desde la instalación de R a la manipulación inicial de datos. 
 
 La idea es que sea algo práctico y a la vez suficientemente explicativo como para que se entienda qué es lo que hace cada bloque de código.
