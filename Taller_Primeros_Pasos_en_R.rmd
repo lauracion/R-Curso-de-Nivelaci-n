@@ -873,12 +873,14 @@ Si no querés que sobreescriba el que ya tenías (con los nombres de las variabl
 
 ## Tarea para el hogar
 
-En el curso de Claudia Coeli, se usará los siguientes paquetes `arules`, `summary`, `epiDisplay`, `psych`, `gridExtra`, `ggplot2`, `GGally`, `fpc`, `cluster`, `NbClust` y `stats`. El paquete `stats` viene con el R base y no hace falta instalarlo. El resto de los paquetes es posible que necesites instalarlo. Podés hacerlo usando este comando:
+En el curso de Claudia Coeli, se usará los siguientes paquetes `arules`, `summary`, `epiDisplay`, `psych`, `gridExtra`, `ggplot2`, `GGally`, `fpc`, `cluster`, `NbClust` y `stats`. El paquete `stats` viene con el R base y no hace falta instalarlo. El resto de los paquetes es posible que necesites instalarlos. Podés hacerlo usando este comando:
 
 ```r
 install.packages(c("arules", "summary", "epiDisplay", "psych", "gridExtra", 
                    "ggplot2", "GGally", "fpc", "cluster", "NbClust"))
 ```
-En lugar de instalar los paquetes uno a uno, concatenamos todos los paquetes que necesitamos usando la función `c()` y los pedimos todos juntos. Cuando comience el taller la semana que viene, podés usar este mismo código cambiando `install.packages` por `library` para cargar los paquetes y así poder usarlos.
+En este código, en lugar de instalar los paquetes uno a uno como hicimos al principio del curso, los concatenamos usando la función `c()` y los pedimos todos juntos. Así nos ahorramos unas líneas de código.
+
+Cuando comience el taller la semana que viene, podés reutilizar este código cambiando `install.packages` por `library` para cargar los paquetes y así ternelos disponibles en la sesión de R que abras ese día.
 
 Es **muy importante** que instales los paquetes **antes** de venir al taller. Caso contrario podría suceder que no tengas las herramientas para aprovechar el taller.
